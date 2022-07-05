@@ -18,21 +18,23 @@ public class EtudiantService {
         List<Etudiant> liste = new ArrayList<>();
         String query = "select id,prenom,nom from Etudiants;";
         try {
-            Etudiant e = new Etudiant();
             Class.forName("com.mysql.jdbc.Driver");
             Connection connect = DriverManager.getConnection("jdbc:mysql://localhost:3306/mglsi_news", "etudiant", "etudiant");
             PreparedStatement preparedStmt = connect.prepareStatement(query);
             ResultSet rs = preparedStmt.executeQuery();
             while (rs.next()) {
+                Etudiant e = new Etudiant();
                 System.out.println("id : " + rs.getInt("id"));
                 System.out.println("Prenom : " + rs.getString("prenom"));
                 System.out.println("Nom : " + rs.getString("nom"));
+                System.out.println("----------------------");
                 e.setID(rs.getInt("id"));
                 e.setPrenom(rs.getString("prenom"));
                 e.setNom(rs.getString("nom"));
                 liste.add(e);
             }
             connect.close();
+            return liste;
 
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
