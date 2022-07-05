@@ -6,6 +6,7 @@ CREATE TABLE Etudiants(
     nom VARCHAR(255) NOT NULL,
     prenom VARCHAR(255) NOT NULL,
     CONSTRAINT pk_Etudiants PRIMARY KEY (id)
-)
+);
 
-CREATE USER mglsi_user@ IDENTIFIED BY 'passer';M%%
+CREATE USER 'etudiant'@'%' IDENTIFIED BY 'etudiant';
+GRANT ALL PRIVILEGES on mglsi_news.Etudiants to'etudiant'@'%';
