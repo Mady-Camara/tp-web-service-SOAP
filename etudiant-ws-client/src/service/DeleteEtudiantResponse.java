@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getCompteResponse complex type.
+ * <p>Java class for deleteEtudiantResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getCompteResponse">
+ * &lt;complexType name="deleteEtudiantResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://service/}compte" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,35 +27,27 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getCompteResponse", propOrder = {
+@XmlType(name = "deleteEtudiantResponse", propOrder = {
     "_return"
 })
-public class GetCompteResponse {
+public class DeleteEtudiantResponse {
 
     @XmlElement(name = "return")
-    protected Compte _return;
+    protected boolean _return;
 
     /**
      * Gets the value of the return property.
      * 
-     * @return
-     *     possible object is
-     *     {@link Compte }
-     *     
      */
-    public Compte getReturn() {
+    public boolean isReturn() {
         return _return;
     }
 
     /**
      * Sets the value of the return property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link Compte }
-     *     
      */
-    public void setReturn(Compte value) {
+    public void setReturn(boolean value) {
         this._return = value;
     }
 

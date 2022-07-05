@@ -1,20 +1,75 @@
 package service;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class ClientWS {
-    public static void main(String[] args) {
-        BanqueService stub = new BanqueServiceService().getBanqueServicePort();
-        double res=stub.conversionEURXOF(100);
-        System.out.println("100 EUR = " + res+ "XOF");
-        Compte compte = stub.getCompte(1L);
-        System.out.println(compte.getSolde());
-        System.out.println("---------------------");
-        List<Compte> listeComptes= stub.listeComptes();
-        for(Compte c:listeComptes){
-            System.out.println(c.getCode());
-            System.out.println(c.getSolde());
-            System.out.println("---------");
+    static Scanner sc = new Scanner(System.in);
+    static EtudiantWs stub = new EtudiantServiceService().getEtudiantWsPort();
+
+    public static void main(String[] args) throws SQLException_Exception {
+        affiche();
+
+    }
+
+    public static void affiche() throws SQLException_Exception {
+        System.out.println();
+        System.out.println("Que souhaitez vous faire?");
+        System.out.println("1. Ajouter un(e) étudiant(e).");
+        System.out.println("2. Lister tous les étudiants.");
+        System.out.println("3. Modifier un étudiant.");
+        System.out.println("4. Supprimer un étudiant.");
+        System.out.println("0. Quitter le programme.");
+        System.out.println();
+        while (choix() != 0) {
+            affiche();
         }
+        ;
+    }
+
+    public static int choix() throws SQLException_Exception {
+        System.out.println("Veuillez effectuer votre choix : ");
+        int choix = sc.nextInt();
+        if (choix == 1) {
+            // créer
+            System.out.println("Entrez le prénom:");
+            String prenom = sc.next();
+            System.out.println("Entrez le nom:");
+            String nom = sc.next();
+            Etudiant etudiant = new Etudiant();
+            etudiant.setPrenom(prenom);
+            etudiant.setNom(nom);
+            stub.addEtudiant(etudiant);
+            System.out.println("------------------------");
+            System.out.println("L'étudiant(e) "+prenom +" " + nom+ " a bien été ajouté à la base de donnée.");
+            System.out.println("------------------------");
+
+        } else if (choix == 2) {
+            // lister
+            List<Etudiant> listeEtudiants = stub.getAllEtudiant();
+            for (Etudiant etudiant : listeEtudiants) {
+                System.out.println("------------------------");
+                System.out.println(etudiant.getID());
+                System.out.println(etudiant.getNom());
+                System.out.println(etudiant.getPrenom());
+                System.out.println("------------------------");
+            }
+        } else if (choix == 3) {
+            //modifier
+            System.out.println("Not implemented method");
+        } else if (choix == 4) {
+            // supprimer
+            System.out.println("Entrez l'identifiant de l'étudiant à supprimer:");
+            int _id = sc.nextInt();
+            stub.deleteEtudiant(_id);
+            System.out.println("L'étudiant avec l'id "+_id+ " a bien été supprimé.");
+
+
+        } else if (choix == 0) {
+            // exit programm
+            System.exit(0);
+        }
+        return choix;
+
     }
 }

@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Conversion_EUR_XOFResponse complex type.
+ * <p>Java class for addEtudiantResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Conversion_EUR_XOFResponse">
+ * &lt;complexType name="addEtudiantResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,19 +27,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Conversion_EUR_XOFResponse", propOrder = {
+@XmlType(name = "addEtudiantResponse", propOrder = {
     "_return"
 })
-public class ConversionEURXOFResponse {
+public class AddEtudiantResponse {
 
     @XmlElement(name = "return")
-    protected double _return;
+    protected boolean _return;
 
     /**
      * Gets the value of the return property.
      * 
      */
-    public double getReturn() {
+    public boolean isReturn() {
         return _return;
     }
 
@@ -47,7 +47,7 @@ public class ConversionEURXOFResponse {
      * Sets the value of the return property.
      * 
      */
-    public void setReturn(double value) {
+    public void setReturn(boolean value) {
         this._return = value;
     }
 

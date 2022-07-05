@@ -24,7 +24,7 @@ public class EtudiantService {
 	}
 	
 	@WebMethod(operationName="getEtudiantById")
-	public Etudiant getEtudaint(@WebParam(name="id")int id) throws SQLException {
+	public Etudiant getEtudiant(@WebParam(name="id")int id) throws SQLException {
 		return this.requete.getById(id);
 	}
 	

@@ -24,13 +24,16 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _listeComptesResponse_QNAME = new QName("http://service/", "listeComptesResponse");
     private final static QName _Root_QNAME = new QName("http://service/", "root");
-    private final static QName _listeComptes_QNAME = new QName("http://service/", "listeComptes");
-    private final static QName _GetCompteResponse_QNAME = new QName("http://service/", "getCompteResponse");
-    private final static QName _ConversionEURXOFResponse_QNAME = new QName("http://service/", "Conversion_EUR_XOFResponse");
-    private final static QName _GetCompte_QNAME = new QName("http://service/", "getCompte");
-    private final static QName _ConversionEURXOF_QNAME = new QName("http://service/", "Conversion_EUR_XOF");
+    private final static QName _SQLException_QNAME = new QName("http://service/", "SQLException");
+    private final static QName _GetEtudiantByIdResponse_QNAME = new QName("http://service/", "getEtudiantByIdResponse");
+    private final static QName _DeleteEtudiant_QNAME = new QName("http://service/", "deleteEtudiant");
+    private final static QName _GetAllEtudiant_QNAME = new QName("http://service/", "getAllEtudiant");
+    private final static QName _GetEtudiantById_QNAME = new QName("http://service/", "getEtudiantById");
+    private final static QName _AddEtudiant_QNAME = new QName("http://service/", "addEtudiant");
+    private final static QName _AddEtudiantResponse_QNAME = new QName("http://service/", "addEtudiantResponse");
+    private final static QName _DeleteEtudiantResponse_QNAME = new QName("http://service/", "deleteEtudiantResponse");
+    private final static QName _GetAllEtudiantResponse_QNAME = new QName("http://service/", "getAllEtudiantResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: service
@@ -40,122 +43,205 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConversionEURXOFResponse }
+     * Create an instance of {@link GetEtudiantById }
      * 
      */
-    public ConversionEURXOFResponse createConversionEURXOFResponse() {
-        return new ConversionEURXOFResponse();
+    public GetEtudiantById createGetEtudiantById() {
+        return new GetEtudiantById();
     }
 
     /**
-     * Create an instance of {@link GetCompte }
+     * Create an instance of {@link DeleteEtudiant }
      * 
      */
-    public GetCompte createGetCompte() {
-        return new GetCompte();
+    public DeleteEtudiant createDeleteEtudiant() {
+        return new DeleteEtudiant();
     }
 
     /**
-     * Create an instance of {@link GetCompteResponse }
+     * Create an instance of {@link GetAllEtudiant }
      * 
      */
-    public GetCompteResponse createGetCompteResponse() {
-        return new GetCompteResponse();
+    public GetAllEtudiant createGetAllEtudiant() {
+        return new GetAllEtudiant();
     }
 
     /**
-     * Create an instance of {@link listeComptes }
+     * Create an instance of {@link GetEtudiantByIdResponse }
      * 
      */
-    public listeComptes createlisteComptes() {
-        return new listeComptes();
+    public GetEtudiantByIdResponse createGetEtudiantByIdResponse() {
+        return new GetEtudiantByIdResponse();
     }
 
     /**
-     * Create an instance of {@link listeComptesResponse }
+     * Create an instance of {@link SQLException }
      * 
      */
-    public listeComptesResponse createlisteComptesResponse() {
-        return new listeComptesResponse();
+    public SQLException createSQLException() {
+        return new SQLException();
     }
 
     /**
-     * Create an instance of {@link Compte }
+     * Create an instance of {@link Etudiant }
      * 
      */
-    public Compte createCompte() {
-        return new Compte();
+    public Etudiant createEtudiant() {
+        return new Etudiant();
     }
 
     /**
-     * Create an instance of {@link ConversionEURXOF }
+     * Create an instance of {@link AddEtudiantResponse }
      * 
      */
-    public ConversionEURXOF createConversionEURXOF() {
-        return new ConversionEURXOF();
+    public AddEtudiantResponse createAddEtudiantResponse() {
+        return new AddEtudiantResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link listeComptesResponse }{@code >}}
+     * Create an instance of {@link DeleteEtudiantResponse }
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "listeComptesResponse")
-    public JAXBElement<listeComptesResponse> createlisteComptesResponse(listeComptesResponse value) {
-        return new JAXBElement<listeComptesResponse>(_listeComptesResponse_QNAME, listeComptesResponse.class, null, value);
+    public DeleteEtudiantResponse createDeleteEtudiantResponse() {
+        return new DeleteEtudiantResponse();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link Compte }{@code >}}
+     * Create an instance of {@link GetAllEtudiantResponse }
+     * 
+     */
+    public GetAllEtudiantResponse createGetAllEtudiantResponse() {
+        return new GetAllEtudiantResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddEtudiant }
+     * 
+     */
+    public AddEtudiant createAddEtudiant() {
+        return new AddEtudiant();
+    }
+
+    /**
+     * Create an instance of {@link Exception }
+     * 
+     */
+    public Exception createException() {
+        return new Exception();
+    }
+
+    /**
+     * Create an instance of {@link Throwable }
+     * 
+     */
+    public Throwable createThrowable() {
+        return new Throwable();
+    }
+
+    /**
+     * Create an instance of {@link StackTraceElement }
+     * 
+     */
+    public StackTraceElement createStackTraceElement() {
+        return new StackTraceElement();
+    }
+
+    /**
+     * Create an instance of {@link SqlException }
+     * 
+     */
+    public SqlException createSqlException() {
+        return new SqlException();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link Etudiant }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://service/", name = "root")
-    public JAXBElement<Compte> createRoot(Compte value) {
-        return new JAXBElement<Compte>(_Root_QNAME, Compte.class, null, value);
+    public JAXBElement<Etudiant> createRoot(Etudiant value) {
+        return new JAXBElement<Etudiant>(_Root_QNAME, Etudiant.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link listeComptes }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SQLException }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "listeComptes")
-    public JAXBElement<listeComptes> createlisteComptes(listeComptes value) {
-        return new JAXBElement<listeComptes>(_listeComptes_QNAME, listeComptes.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "SQLException")
+    public JAXBElement<SQLException> createSQLException(SQLException value) {
+        return new JAXBElement<SQLException>(_SQLException_QNAME, SQLException.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCompteResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetEtudiantByIdResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getCompteResponse")
-    public JAXBElement<GetCompteResponse> createGetCompteResponse(GetCompteResponse value) {
-        return new JAXBElement<GetCompteResponse>(_GetCompteResponse_QNAME, GetCompteResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getEtudiantByIdResponse")
+    public JAXBElement<GetEtudiantByIdResponse> createGetEtudiantByIdResponse(GetEtudiantByIdResponse value) {
+        return new JAXBElement<GetEtudiantByIdResponse>(_GetEtudiantByIdResponse_QNAME, GetEtudiantByIdResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConversionEURXOFResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEtudiant }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "Conversion_EUR_XOFResponse")
-    public JAXBElement<ConversionEURXOFResponse> createConversionEURXOFResponse(ConversionEURXOFResponse value) {
-        return new JAXBElement<ConversionEURXOFResponse>(_ConversionEURXOFResponse_QNAME, ConversionEURXOFResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "deleteEtudiant")
+    public JAXBElement<DeleteEtudiant> createDeleteEtudiant(DeleteEtudiant value) {
+        return new JAXBElement<DeleteEtudiant>(_DeleteEtudiant_QNAME, DeleteEtudiant.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetCompte }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllEtudiant }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "getCompte")
-    public JAXBElement<GetCompte> createGetCompte(GetCompte value) {
-        return new JAXBElement<GetCompte>(_GetCompte_QNAME, GetCompte.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getAllEtudiant")
+    public JAXBElement<GetAllEtudiant> createGetAllEtudiant(GetAllEtudiant value) {
+        return new JAXBElement<GetAllEtudiant>(_GetAllEtudiant_QNAME, GetAllEtudiant.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ConversionEURXOF }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetEtudiantById }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "Conversion_EUR_XOF")
-    public JAXBElement<ConversionEURXOF> createConversionEURXOF(ConversionEURXOF value) {
-        return new JAXBElement<ConversionEURXOF>(_ConversionEURXOF_QNAME, ConversionEURXOF.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "getEtudiantById")
+    public JAXBElement<GetEtudiantById> createGetEtudiantById(GetEtudiantById value) {
+        return new JAXBElement<GetEtudiantById>(_GetEtudiantById_QNAME, GetEtudiantById.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddEtudiant }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "addEtudiant")
+    public JAXBElement<AddEtudiant> createAddEtudiant(AddEtudiant value) {
+        return new JAXBElement<AddEtudiant>(_AddEtudiant_QNAME, AddEtudiant.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddEtudiantResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "addEtudiantResponse")
+    public JAXBElement<AddEtudiantResponse> createAddEtudiantResponse(AddEtudiantResponse value) {
+        return new JAXBElement<AddEtudiantResponse>(_AddEtudiantResponse_QNAME, AddEtudiantResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEtudiantResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "deleteEtudiantResponse")
+    public JAXBElement<DeleteEtudiantResponse> createDeleteEtudiantResponse(DeleteEtudiantResponse value) {
+        return new JAXBElement<DeleteEtudiantResponse>(_DeleteEtudiantResponse_QNAME, DeleteEtudiantResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllEtudiantResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "getAllEtudiantResponse")
+    public JAXBElement<GetAllEtudiantResponse> createGetAllEtudiantResponse(GetAllEtudiantResponse value) {
+        return new JAXBElement<GetAllEtudiantResponse>(_GetAllEtudiantResponse_QNAME, GetAllEtudiantResponse.class, null, value);
     }
 
 }
