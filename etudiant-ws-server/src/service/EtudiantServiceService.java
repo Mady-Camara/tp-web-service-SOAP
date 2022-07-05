@@ -65,11 +65,11 @@ public class EtudiantServiceService
     /**
      * 
      * @return
-     *     returns BanqueService
+     *     returns EtudiantWS
      */
-    @WebEndpoint(name = "BanqueServicePort")
-    public BanqueService getBanqueServicePort() {
-        return super.getPort(new QName("http://service/", "BanqueServicePort"), BanqueService.class);
+    @WebEndpoint(name = "EtudiantWSPort")
+    public EtudiantWS getEtudiantWSPort() {
+        return super.getPort(new QName("http://service/", "EtudiantWSPort"), EtudiantWS.class);
     }
 
     /**
@@ -77,11 +77,11 @@ public class EtudiantServiceService
      * @param features
      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the <code>features</code> parameter will have their default values.
      * @return
-     *     returns BanqueService
+     *     returns EtudiantWS
      */
-    @WebEndpoint(name = "BanqueServicePort")
-    public BanqueService getBanqueServicePort(WebServiceFeature... features) {
-        return super.getPort(new QName("http://service/", "BanqueServicePort"), BanqueService.class, features);
+    @WebEndpoint(name = "EtudiantWSPort")
+    public EtudiantWS getEtudiantWSPort(WebServiceFeature... features) {
+        return super.getPort(new QName("http://service/", "EtudiantWSPort"), EtudiantWS.class, features);
     }
 
     private static URL __getWsdlLocation() {

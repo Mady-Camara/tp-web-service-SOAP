@@ -24,17 +24,17 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ModifierEtudiant_QNAME = new QName("http://service/", "modifierEtudiant");
     private final static QName _Root_QNAME = new QName("http://service/", "root");
     private final static QName _GetEtudiantsResponse_QNAME = new QName("http://service/", "getEtudiantsResponse");
-    private final static QName _UpdateEtudiant_QNAME = new QName("http://service/", "updateEtudiant");
-    private final static QName _CreateEtudiantResponse_QNAME = new QName("http://service/", "createEtudiantResponse");
-    private final static QName _DeleteEtudiant_QNAME = new QName("http://service/", "deleteEtudiant");
+    private final static QName _AjouterEtudiantResponse_QNAME = new QName("http://service/", "ajouterEtudiantResponse");
+    private final static QName _AjouterEtudiant_QNAME = new QName("http://service/", "ajouterEtudiant");
+    private final static QName _SupprimerEtudiantResponse_QNAME = new QName("http://service/", "supprimerEtudiantResponse");
+    private final static QName _ModifierEtudiantResponse_QNAME = new QName("http://service/", "modifierEtudiantResponse");
     private final static QName _GetEtudiantResponse_QNAME = new QName("http://service/", "getEtudiantResponse");
     private final static QName _GetEtudiant_QNAME = new QName("http://service/", "getEtudiant");
-    private final static QName _DeleteEtudiantResponse_QNAME = new QName("http://service/", "deleteEtudiantResponse");
+    private final static QName _SupprimerEtudiant_QNAME = new QName("http://service/", "supprimerEtudiant");
     private final static QName _GetEtudiants_QNAME = new QName("http://service/", "getEtudiants");
-    private final static QName _UpdateEtudiantResponse_QNAME = new QName("http://service/", "updateEtudiantResponse");
-    private final static QName _CreateEtudiant_QNAME = new QName("http://service/", "createEtudiant");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: service
@@ -52,27 +52,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link CreateEtudiantResponse }
+     * Create an instance of {@link ModifierEtudiantResponse }
      * 
      */
-    public CreateEtudiantResponse createCreateEtudiantResponse() {
-        return new CreateEtudiantResponse();
+    public ModifierEtudiantResponse createModifierEtudiantResponse() {
+        return new ModifierEtudiantResponse();
     }
 
     /**
-     * Create an instance of {@link DeleteEtudiant }
+     * Create an instance of {@link AjouterEtudiant }
      * 
      */
-    public DeleteEtudiant createDeleteEtudiant() {
-        return new DeleteEtudiant();
+    public AjouterEtudiant createAjouterEtudiant() {
+        return new AjouterEtudiant();
     }
 
     /**
-     * Create an instance of {@link UpdateEtudiant }
+     * Create an instance of {@link SupprimerEtudiantResponse }
      * 
      */
-    public UpdateEtudiant createUpdateEtudiant() {
-        return new UpdateEtudiant();
+    public SupprimerEtudiantResponse createSupprimerEtudiantResponse() {
+        return new SupprimerEtudiantResponse();
+    }
+
+    /**
+     * Create an instance of {@link AjouterEtudiantResponse }
+     * 
+     */
+    public AjouterEtudiantResponse createAjouterEtudiantResponse() {
+        return new AjouterEtudiantResponse();
     }
 
     /**
@@ -84,19 +92,19 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ModifierEtudiant }
+     * 
+     */
+    public ModifierEtudiant createModifierEtudiant() {
+        return new ModifierEtudiant();
+    }
+
+    /**
      * Create an instance of {@link Etudiant }
      * 
      */
     public Etudiant createEtudiant() {
         return new Etudiant();
-    }
-
-    /**
-     * Create an instance of {@link CreateEtudiant }
-     * 
-     */
-    public CreateEtudiant createCreateEtudiant() {
-        return new CreateEtudiant();
     }
 
     /**
@@ -108,19 +116,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UpdateEtudiantResponse }
+     * Create an instance of {@link SupprimerEtudiant }
      * 
      */
-    public UpdateEtudiantResponse createUpdateEtudiantResponse() {
-        return new UpdateEtudiantResponse();
-    }
-
-    /**
-     * Create an instance of {@link DeleteEtudiantResponse }
-     * 
-     */
-    public DeleteEtudiantResponse createDeleteEtudiantResponse() {
-        return new DeleteEtudiantResponse();
+    public SupprimerEtudiant createSupprimerEtudiant() {
+        return new SupprimerEtudiant();
     }
 
     /**
@@ -132,11 +132,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Optional }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModifierEtudiant }{@code >}}
      * 
      */
-    public Optional createOptional() {
-        return new Optional();
+    @XmlElementDecl(namespace = "http://service/", name = "modifierEtudiant")
+    public JAXBElement<ModifierEtudiant> createModifierEtudiant(ModifierEtudiant value) {
+        return new JAXBElement<ModifierEtudiant>(_ModifierEtudiant_QNAME, ModifierEtudiant.class, null, value);
     }
 
     /**
@@ -158,30 +159,39 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateEtudiant }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AjouterEtudiantResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "updateEtudiant")
-    public JAXBElement<UpdateEtudiant> createUpdateEtudiant(UpdateEtudiant value) {
-        return new JAXBElement<UpdateEtudiant>(_UpdateEtudiant_QNAME, UpdateEtudiant.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "ajouterEtudiantResponse")
+    public JAXBElement<AjouterEtudiantResponse> createAjouterEtudiantResponse(AjouterEtudiantResponse value) {
+        return new JAXBElement<AjouterEtudiantResponse>(_AjouterEtudiantResponse_QNAME, AjouterEtudiantResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEtudiantResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AjouterEtudiant }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "createEtudiantResponse")
-    public JAXBElement<CreateEtudiantResponse> createCreateEtudiantResponse(CreateEtudiantResponse value) {
-        return new JAXBElement<CreateEtudiantResponse>(_CreateEtudiantResponse_QNAME, CreateEtudiantResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "ajouterEtudiant")
+    public JAXBElement<AjouterEtudiant> createAjouterEtudiant(AjouterEtudiant value) {
+        return new JAXBElement<AjouterEtudiant>(_AjouterEtudiant_QNAME, AjouterEtudiant.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEtudiant }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SupprimerEtudiantResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "deleteEtudiant")
-    public JAXBElement<DeleteEtudiant> createDeleteEtudiant(DeleteEtudiant value) {
-        return new JAXBElement<DeleteEtudiant>(_DeleteEtudiant_QNAME, DeleteEtudiant.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "supprimerEtudiantResponse")
+    public JAXBElement<SupprimerEtudiantResponse> createSupprimerEtudiantResponse(SupprimerEtudiantResponse value) {
+        return new JAXBElement<SupprimerEtudiantResponse>(_SupprimerEtudiantResponse_QNAME, SupprimerEtudiantResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ModifierEtudiantResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://service/", name = "modifierEtudiantResponse")
+    public JAXBElement<ModifierEtudiantResponse> createModifierEtudiantResponse(ModifierEtudiantResponse value) {
+        return new JAXBElement<ModifierEtudiantResponse>(_ModifierEtudiantResponse_QNAME, ModifierEtudiantResponse.class, null, value);
     }
 
     /**
@@ -203,12 +213,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DeleteEtudiantResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link SupprimerEtudiant }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://service/", name = "deleteEtudiantResponse")
-    public JAXBElement<DeleteEtudiantResponse> createDeleteEtudiantResponse(DeleteEtudiantResponse value) {
-        return new JAXBElement<DeleteEtudiantResponse>(_DeleteEtudiantResponse_QNAME, DeleteEtudiantResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://service/", name = "supprimerEtudiant")
+    public JAXBElement<SupprimerEtudiant> createSupprimerEtudiant(SupprimerEtudiant value) {
+        return new JAXBElement<SupprimerEtudiant>(_SupprimerEtudiant_QNAME, SupprimerEtudiant.class, null, value);
     }
 
     /**
@@ -218,24 +228,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://service/", name = "getEtudiants")
     public JAXBElement<GetEtudiants> createGetEtudiants(GetEtudiants value) {
         return new JAXBElement<GetEtudiants>(_GetEtudiants_QNAME, GetEtudiants.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link UpdateEtudiantResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "updateEtudiantResponse")
-    public JAXBElement<UpdateEtudiantResponse> createUpdateEtudiantResponse(UpdateEtudiantResponse value) {
-        return new JAXBElement<UpdateEtudiantResponse>(_UpdateEtudiantResponse_QNAME, UpdateEtudiantResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link CreateEtudiant }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://service/", name = "createEtudiant")
-    public JAXBElement<CreateEtudiant> createCreateEtudiant(CreateEtudiant value) {
-        return new JAXBElement<CreateEtudiant>(_CreateEtudiant_QNAME, CreateEtudiant.class, null, value);
     }
 
 }

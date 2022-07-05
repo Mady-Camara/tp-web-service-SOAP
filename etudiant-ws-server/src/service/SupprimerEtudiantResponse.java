@@ -8,16 +8,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for deleteEtudiantResponse complex type.
+ * <p>Java class for supprimerEtudiantResponse complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="deleteEtudiantResponse">
+ * &lt;complexType name="supprimerEtudiantResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -27,27 +27,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "deleteEtudiantResponse", propOrder = {
+@XmlType(name = "supprimerEtudiantResponse", propOrder = {
     "_return"
 })
-public class DeleteEtudiantResponse {
+public class SupprimerEtudiantResponse {
 
     @XmlElement(name = "return")
-    protected boolean _return;
+    protected Boolean _return;
 
     /**
      * Gets the value of the return property.
      * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
      */
-    public boolean isReturn() {
+    public Boolean isReturn() {
         return _return;
     }
 
     /**
      * Sets the value of the return property.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
      */
-    public void setReturn(boolean value) {
+    public void setReturn(Boolean value) {
         this._return = value;
     }
 
