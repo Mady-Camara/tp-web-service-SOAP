@@ -17,10 +17,11 @@ public class Requete {
 		this.etat = con.createStatement();
 	}
 	
-	public boolean addEtudiant(Etudiant etudiant) throws SQLException {
+	public boolean addEtudiant(String prenom ,String nom) throws SQLException {
+		
 		this.pre = this.con.prepareStatement("INSERT INTO Etudiants (prenom, nom) VALUES (?, ?)");
-		this.pre.setString(1, etudiant.getPrenom());
-		this.pre.setString(2, etudiant.getNom());
+		this.pre.setString(1, prenom);
+		this.pre.setString(2, nom);
 		boolean ok = this.pre.executeUpdate() > 0 ? true : false;
 		
 		return ok;
@@ -47,22 +48,15 @@ public class Requete {
 	}
 	
 	
-	public Etudiant getById(int id) throws SQLException {
-		ResultSet resultats = this.etat.executeQuery("SELECT * FROM Etudiants WHERE id"+id+"");
-		Etudiant etudiant = new Etudiant();
-		while(resultats.next()) {
-			if(resultats.getString("id") != null) {
-				etudiant.setID(resultats.getInt("id"));
-			}
-			if(resultats.getString("prenom") != null) {
-				etudiant.setPrenom(resultats.getString("prenom"));
-			}
-			if(resultats.getString("nom") != null) {
-				etudiant.setNom(resultats.getString("nom"));
-			}
-		}
+	public boolean updateEtudiant(int id ,String prenom ,String nom) throws SQLException {
+	
+		this.pre = this.con.prepareStatement("UPDATE Etudiants SET prenom=?, nom=? WHERE id=?");
+		this.pre.setString(1, prenom);
+		this.pre.setString(2, nom);
+		this.pre.setInt(3, id);
+		boolean ok = this.pre.executeUpdate() > 0 ? true : false;
 		
-		return etudiant;
+		return ok;
 	}
 	
 	public boolean deletetById(int id) throws SQLException {

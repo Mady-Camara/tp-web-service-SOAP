@@ -23,18 +23,17 @@ public class EtudiantService {
 		return this.requete.getAllEtudiant();
 	}
 	
-	@WebMethod(operationName="getEtudiantById")
-	public Etudiant getEtudaint(@WebParam(name="id")int id) throws SQLException {
-		return this.requete.getById(id);
-	}
-	
 	@WebMethod(operationName="addEtudiant")
-	public boolean addEtudiant(@WebParam(name="etudiant") Etudiant etudiant) throws SQLException{
-		return this.requete.addEtudiant(etudiant);
+	public boolean addEtudiant(@WebParam(name="prenom") String prenom ,@WebParam(name="nom") String nom) throws SQLException{
+		return this.requete.addEtudiant(prenom ,nom);
 	}
 	
 	@WebMethod(operationName="deleteEtudiant")
 	public boolean delEtudiant(@WebParam(name="id") int id) throws SQLException{
 		return this.requete.deletetById(id);
+	}
+	@WebMethod(operationName="updateEtudiant")
+	public boolean updateEtudiant(@WebParam(name="id") int id,@WebParam(name="prenom") String prenom ,@WebParam(name="nom") String nom) throws SQLException{
+		return this.requete.updateEtudiant(id,prenom,nom);
 	}
 }
