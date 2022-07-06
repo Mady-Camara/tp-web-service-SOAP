@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Conversion_EUR_XOF complex type.
+ * <p>Java class for getEtudiantById complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Conversion_EUR_XOF">
+ * &lt;complexType name="getEtudiantById">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="montant" type="{http://www.w3.org/2001/XMLSchema}double"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,27 +26,27 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Conversion_EUR_XOF", propOrder = {
-    "montant"
+@XmlType(name = "getEtudiantById", propOrder = {
+    "id"
 })
-public class ConversionEURXOF {
+public class GetEtudiantById {
 
-    protected double montant;
+    protected int id;
 
     /**
-     * Gets the value of the montant property.
+     * Gets the value of the id property.
      * 
      */
-    public double getMontant() {
-        return montant;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Sets the value of the montant property.
+     * Sets the value of the id property.
      * 
      */
-    public void setMontant(double value) {
-        this.montant = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }

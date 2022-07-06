@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for getCompte complex type.
+ * <p>Java class for addEtudiant complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="getCompte">
+ * &lt;complexType name="addEtudiant">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="code" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
+ *         &lt;element name="etudiant" type="{http://service/}etudiant" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,35 +26,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getCompte", propOrder = {
-    "code"
+@XmlType(name = "addEtudiant", propOrder = {
+    "etudiant"
 })
-public class GetCompte {
+public class AddEtudiant {
 
-    protected Long code;
+    protected Etudiant etudiant;
 
     /**
-     * Gets the value of the code property.
+     * Gets the value of the etudiant property.
      * 
      * @return
      *     possible object is
-     *     {@link Long }
+     *     {@link Etudiant }
      *     
      */
-    public Long getCode() {
-        return code;
+    public Etudiant getEtudiant() {
+        return etudiant;
     }
 
     /**
-     * Sets the value of the code property.
+     * Sets the value of the etudiant property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Long }
+     *     {@link Etudiant }
      *     
      */
-    public void setCode(Long value) {
-        this.code = value;
+    public void setEtudiant(Etudiant value) {
+        this.etudiant = value;
     }
 
 }

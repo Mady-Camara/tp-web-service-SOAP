@@ -23,6 +23,14 @@ public class EtudiantService {
 		return this.requete.getAllEtudiant();
 	}
 	
+<<<<<<< HEAD
+=======
+	@WebMethod(operationName="getEtudiantById")
+	public Etudiant getEtudiant(@WebParam(name="id")int id) throws SQLException {
+		return this.requete.getById(id);
+	}
+	
+>>>>>>> 29e0fe74875d05c8e119c59b4df1c06fc5be47b0
 	@WebMethod(operationName="addEtudiant")
 	public boolean addEtudiant(@WebParam(name="prenom") String prenom ,@WebParam(name="nom") String nom) throws SQLException{
 		return this.requete.addEtudiant(prenom ,nom);
