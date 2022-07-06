@@ -12,7 +12,7 @@
 if (isset($_POST["nom"]) && isset($_POST["prenom"]) ) {
     if($_POST["nom"] != "" && $_POST["prenom"] !=""){
         if(isset($_GET["update"]) && $_GET["update"] != ""){
-            $clientSOAP = new SoapClient("http://localhost:8683/EtudiantService?wsdl");
+            $clientSOAP = new SoapClient("http://localhost:8585/EtudiantService?wsdl");
             $parameters = new stdClass();
             $parameters->id = $_GET["update"];
             $parameters->nom = $_POST["nom"];
@@ -21,13 +21,15 @@ if (isset($_POST["nom"]) && isset($_POST["prenom"]) ) {
             $_GET["update"] = "";
             header("Location: index.php");
         }
-        $clientSOAP = new SoapClient("http://localhost:8683/EtudiantService?wsdl");
-        $parameters = new stdClass();
-        $parameters->prenom = $_POST['prenom'];
-        $parameters->nom = $_POST["nom"];
-        $result = $clientSOAP->__soapCall("addEtudiant", array($parameters));
-        //Change the url to the new page
-        header("Location: index.php");
+        else{
+            $clientSOAP = new SoapClient("http://localhost:8585/EtudiantService?wsdl");
+            $parameters = new stdClass();
+            $parameters->prenom = $_POST['prenom'];
+            $parameters->nom = $_POST["nom"];
+            $result = $clientSOAP->__soapCall("addEtudiant", array($parameters));
+            //Change the url to the new page
+            header("Location: index.php");
+        }
     }
     
 }

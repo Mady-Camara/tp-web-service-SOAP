@@ -24,7 +24,7 @@
                   </thead>
                   <tbody>
                   <?php 
-                        $clientSOAP = new SoapClient("http://localhost:8683/EtudiantService?wsdl");
+                        $clientSOAP = new SoapClient("http://localhost:8585/EtudiantService?wsdl");
                         $ID = 1;
                         $prenom = "";
                         $nom = "";
@@ -52,7 +52,7 @@
                     </tr>
                     <?php }} 
                     if(isset($_GET["id"]) && $_GET["id"] != ""){
-                        $clientSOAP = new SoapClient("http://localhost:8683/EtudiantService?wsdl");
+                        $clientSOAP = new SoapClient("http://localhost:8585/EtudiantService?wsdl");
                         $parameters = new stdClass();
                         $parameters->id = $_GET["id"];
                         $result = $clientSOAP->__soapCall("deleteEtudiant", array($parameters));
